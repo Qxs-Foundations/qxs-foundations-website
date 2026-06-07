@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: Qxs-Foundations/qxs-foundations-website
+  branch: main
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: products
+    label: Products
+    folder: content/products
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Status", name: "status", widget: "select", options: ["Active", "Beta", "Research", "Coming Soon"] }
+      - { label: "Features", name: "features", widget: "list" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  - name: downloads
+    label: Downloads
+    folder: content/downloads
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Version", name: "version", widget: "string" }
+      - { label: "Release Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "File URL", name: "file_url", widget: "string" }
+      - { label: "SHA256 Signature", name: "sha256", widget: "string" }
+      - { label: "File Size", name: "file_size", widget: "string" }
+      - { label: "Platform", name: "platform", widget: "select", options: ["Windows", "Linux", "macOS", "Android", "All Platforms"] }
+      - { label: "Product ID", name: "product_id", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Name", name: "title", widget: "string" }
+      - { label: "Overview", name: "overview", widget: "text" }
+      - { label: "Status", name: "status", widget: "select", options: ["Active Development", "Research Phase", "Planning", "Coming Soon"] }
+      - { label: "Phase", name: "phase", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  - name: announcements
+    label: Announcements
+    folder: content/announcements
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
