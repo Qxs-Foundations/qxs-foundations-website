@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal | QXS Foundations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Detailed legal documentation for QXS Foundations including comprehensive Terms of Use, Privacy Policy, Cookie Policy, and Open Source Notice.">
+  <style>
+    /* Dedicated visual page styles for the interactive document viewer */
+    .legal-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    
+    .tab-card {
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    .tab-card.active-tab {
+      background: var(--bg-panel-hover);
+      border-color: var(--accent-light);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+    
+    .tab-card.active-tab h3 {
+      color: var(--accent-blue);
+    }
+    
+    /* Aero glass document container sheet */
+    .legal-document-viewer {
+      background: var(--bg-dark);
+      border: 1px solid var(--border-muted);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 48px;
+      position: relative;
+    }
+    
+    .doc-content {
+      display: none;
+      animation: docFadeIn 0.4s ease forwards;
+    }
+    
+    .doc-content.active-doc {
+      display: block;
+    }
+    
+    .doc-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-muted);
+      padding-bottom: 12px;
+    }
+    
+    /* Highly comprehensive document section styling */
+    .doc-content .legal-section {
+      margin-top: 28px;
+      border-top: 1px dashed var(--border-muted);
+      padding-top: 20px;
+    }
+    
+    .doc-content .legal-section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+    
+    .doc-content h3 {
+      font-size: 1.15rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    
+    .doc-content p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      text-align: justify;
+    }
+    
+    .doc-content ol, .doc-content ul {
+      margin-left: 24px;
+      margin-bottom: 20px;
+      display: grid;
+      gap: 10px;
+    }
+    
+    .doc-content li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    
+    @keyframes docFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 964px) {
+      .legal-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .legal-tabs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="legal-page">
+  <div class="page-shell">
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="QXS Foundations" class="brand-logo">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Our Projects</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="docs.html">Docs</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="git.html">Git</a>
+        <a href="legal.html" class="active">Legal</a>
+        <a href="security.html">Security</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Page Intro -->
+      <section class="section page-intro reveal active">
+        <div>
+          <span class="eyebrow">Governance & Policies</span>
+          <h1>Ecosystem legal terms</h1>
+          <p>Please select a tab card below to read our detailed, comprehensive terms of use, privacy policy, cookie compliance, and hybrid licensing guidelines.</p>
+        </div>
+      </section>
+
+      <!-- Interactive Tab Cards -->
+      <section class="legal-tabs reveal">
+        <article class="product-card tab-card active-tab" data-tab="terms">
+          <span class="badge">Terms</span>
+          <h3>Terms of Use</h3>
+          <p style="font-size: 0.85rem; margin-top: 6px; margin-bottom: 0;">Comprehensive user agreements & liability disclaimers.</p>
+        </article>
+
+        <article class="product-card tab-card" data-tab="privacy">
+          <span class="badge">Privacy</span>
+          <h3>Privacy Policy</h3>
+          <p style="font-size: 0.85rem; margin-top: 6px; margin-bottom: 0;">Strict telemetry ban & local-first client containment.</p>
+        </article>
+
+        <article class="product-card tab-card" data-tab="cookies">
+          <span class="badge">Tracking</span>
+          <h3>Cookie Policy</h3>
+          <p style="font-size: 0.85rem; margin-top: 6px; margin-bottom: 0;">Strictly essential session cookies & zero advertising.</p>
+        </article>
+
+        <article class="product-card tab-card" data-tab="licensing">
+          <span class="badge">Licensing</span>
+          <h3>Open Source Notice</h3>
+          <p style="font-size: 0.85rem; margin-top: 6px; margin-bottom: 0;">Permissive hybrid, open & proprietary license models.</p>
+        </article>
+      </section>
+
+      <!-- Interactive Document Viewer Sheet -->
+      <section class="legal-document-viewer reveal">
+        
+        <!-- 1. Terms of Use (Highly Detailed Formal Legal Text) -->
+        <div id="doc-terms" class="doc-content active-doc">
+          <h2>Terms of Use and Conditions</h2>
+          <p><em>Last updated: June 2026 — Version 3.0 — Comprehensive Sovereign Ecosystem Agreement</em></p>
+          <p>PLEASE READ THESE TERMS OF USE AND CONDITIONS IN THEIR ENTIRETY WITH EXTREME CARE BEFORE ACCESSING, COMPILING, RUNNING, DISTRIBUTING, OR EXECUTE ANY SOFTWARE PRIMITIVES, COMPILER MODULES, RUNTIME LIBRARIES, CRYPTOGRAPHIC DATA STRUCTURES, OR WEB SERVICES PROVIDED BY QXS FOUNDATIONS (THE "FOUNDATION"). BY ACCESSING OUR SUBDOMAINS OR RUNNING OUR CODEBASES, YOU UNCONDITIONALLY AGREE TO BE BOUND BY EVERY PROVISION OF THIS CONTRACT.</p>
+          
+          <div class="legal-section">
+            <h3>Article I: Preamble, Scope & Binding Jurisdictional Thresholds</h3>
+            <p>1.1. <strong>Contractual Scope:</strong> This comprehensive Terms of Use and Conditions (referred to herein as the "Terms", the "Contract", or the "Agreement") constitutes a binding, enforceable legal contract between you (acting either as an individual independent developer, researcher, systems administrator, student, or builder, or as a fully authorized representative of a corporate entity, academic institution, non-profit organization, or government agency, hereinafter collectively referred to as the "User", "Builder", "Licensee", or "You") and QXS Foundations, an independent computing research initiative dedicated to sovereign digital development (hereinafter referred to as the "Foundation"). This Contract governs your absolute access to, interaction with, downloading of, local compilation of, and deployment of all Foundation Assets, subdomains, and related digital materials.</p>
+            <p>1.2. <strong>Immediate Legal Consent:</strong> By accessing any public mirror, navigating any page under the primary domain <code>qxs-foundations.org.in</code> or its audited subdomains (including <code>www</code>, <code>docs</code>, <code>safe</code>, <code>lang</code>, <code>os</code>, <code>wsc</code>, <code>ai</code>, <code>downloads</code>, <code>git</code>), downloading any source zip folders, cloning our Git trees, or running pre-compiled binary releases, you declare and warrant that you possess the full legal authority to enter into this Contract and that you accept every article and clause herein. If you do not accept these Terms in full, you are strictly prohibited from compiling, executing, hosting, or interacting with any QXS code or platform. In such case, you must immediately close all browser tabs, delete all local clones, and purge any related local database volumes or cache files from your machines.</p>
+            <p>1.3. <strong>Ecosystem Autonomy:</strong> QXS Foundations operates strictly as a developer-driven, non-corporate computing research collective. The Foundation builds and distributes experimental software tools designed to facilitate localized, client-side, telemetry-free development. This Contract is a mutual commitment to preserve system independence, cryptographic sovereignty, and codebase provenance across the global developer community.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article II: Comprehensive Definitions of Ecosystem Components</h3>
+            <p>To ensure absolute clarity throughout this Contract, the following capitalized terms shall have the exact definitions set forth below, regardless of whether they appear in singular or plural form:</p>
+            <ol>
+              <li><strong>"Foundation Assets"</strong> refers to the complete collection of web directories, subdomains, offline source repositories, codebases, compilers, libraries, runtime environments, blueprints, graphics, trademarks, logos, GPG keys, and pre-compiled binaries managed by the Foundation.</li>
+              <li><strong>"Sovereign stack"</strong> refers to the collection of computing software and hardware concepts designed to run completely under client-side control, strictly avoiding background communication nodes or external telemetry arrays.</li>
+              <li><strong>"Safe Manager"</strong> refers to the local-first cryptographic database utility developed under the <code>safe</code> subdomain for personal and enterprise credential stewardship.</li>
+              <li><strong>"QXS Lang"</strong> refers to the custom policy-driven programming language developed by the Foundation, featuring trinary logic models and intent-aware compilation engines.</li>
+              <li><strong>"QXS OS"</strong> refers to the sovereign operating system kernel and shell architectures under active development by the Foundation.</li>
+              <li><strong>"Wave State Computer (WSC)"</strong> refers to alternative analog-inspired room-temperature computing systems and theoretical architectures under experimental research phases.</li>
+              <li><strong>"Secure Sandbox"</strong> refers to a client-side execution container that isolates running processes from modifying secondary system files or initiating unverified network streams.</li>
+              <li><strong>"GPG Commit Signature"</strong> refers to a cryptographic signature verified against a known public GPG key, confirming the authorship and integrity of a specific source code commit.</li>
+            </ol>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article III: Service Availability & Subdomain Architecture</h3>
+            <p>3.1. <strong>Subdomain Provisioning:</strong> The Foundation provides access to various subdomain channels designed for research and deployment. Each channel is subject to distinct availability rules:</p>
+            <ul>
+              <li><strong>docs.qxs-foundations.org.in (Documentation):</strong> Provided as a read-only portal. Contents are updated dynamically as compiler specs and kernel releases evolve. You may copy and reference sample codes freely.</li>
+              <li><strong>safe.qxs-foundations.org.in (Safe Manager):</strong> Served as a client-side cryptographic web utility. You are solely responsible for generating, managing, and preserving the master passphrases and Argon2ID key parameters.</li>
+              <li><strong>lang.qxs-foundations.org.in (QXS Lang):</strong> Provides interactive previews, policy engine documentation, syntax guides, and waitlist registration layers.</li>
+              <li><strong>os.qxs-foundations.org.in & wsc.qxs-foundations.org.in:</strong> Serve strictly as experimental overview portals. Blueprints are for research validation and academic audit only.</li>
+              <li><strong>downloads.qxs-foundations.org.in & git.qxs-foundations.org.in:</strong> Mirror release binaries and active Git trees. Availability is subject to public CDN limits and rate-limiting controls.</li>
+            </ul>
+            <p>3.2. <strong>No Availability Guarantees:</strong> Because the Foundation runs on independent infrastructure, we do not guarantee continuous, uninterrupted access to any subdomain or public mirror. We reserve the absolute right to modify, suspend, throttle, or terminate access to any digital assets at any time to defend against malicious actions or preserve operational integrity.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IV: Cryptographic User Identity & Passphrase Custody</h3>
+            <p>4.1. <strong>Zero-Profile Mandate:</strong> QXS Foundations does not compile, store, or manage user profiles, centralized email lists (except as opted-in for newsletters), login credentials, or server-side user directories. Your identity within the QXS ecosystem is purely cryptographic and client-controlled.</p>
+            <p>4.2. <strong>Master Key Sovereignty:</strong> You acknowledge that applications like QXS Safe Manager use Argon2ID key derivation combined with AES-256-GCM encryption entirely within your browser's local memory. The Foundation does not possess, transmit, or back up your master passphrase or decryption keys. You are exclusively responsible for creating robust passphrases, backing up your database files, and preserving recovery parameters. In the event of passphrase loss, you acknowledge that recovery is mathematically impossible and that the Foundation has no technical means to decrypt your credentials.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article V: Licensing Grants and Permitted Commercial Usage</h3>
+            <p>5.1. <strong>MIT/Apache Dual-Licensing Layers:</strong> General client libraries, driver layers, system templates, and CSS frameworks are released under the MIT License or the Apache License, Version 2.0. You are granted full rights to modify, integrate, and distribute these modules, provided you preserve all copyright notices and contributor attributes in downstream files.</p>
+            <p>5.2. <strong>Compiler Licensing Restrictions:</strong> Core compiler blocks (such as QXS Lang compiler layers) are released under a custom permissive license. You are fully permitted to compile and execute code locally to build commercial applications. However, you are strictly prohibited from wrapping the compiler engine inside a proprietary, closed-source SaaS interface that charges compilation fees while locking developers out of local access. Compilation access must remain sovereign and reproducible on client-side machines.</p>
+            <p>5.3. <strong>Closed-Kernel Research Exclusions:</strong> Early-stage operating system cores, Wave State Computer math arrays, and experimental hardware models are read-only for educational and safety audits. You may inspect the code on public mirrors but are strictly prohibited from compiling, distributing, or utilizing these blocks for commercial purposes without securing prior written consent from the Foundation.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VI: Compiling Controls and Sandbox Isolation Mandates</h3>
+            <p>6.1. <strong>Audit Prerequisite:</strong> You agree that compiling source code downloaded from the web carries absolute risk to your hardware, file structures, and local network adapters. You assume sole liability for auditing any pulled repositories before starting a build cycle. The Foundation does not represent that any source code will compile cleanly on all machine configurations.</p>
+            <p>6.2. <strong>Sandbox Mandate:</strong> When executing experimental system modules (such as early-stage QXS OS builds or alternate kernel shells), you agree to execute them strictly inside a Secure Sandbox. You agree not to override compile-time security parameters, memory boundaries, or sandboxing flags. Attempting to bypass the compiler's intent-aware safety logic automatically voids your license to use QXS tools.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VII: Code Submissions, Provenance & GPG Verifications</h3>
+            <p>7.1. <strong>Verifiable Provenance:</strong> The Foundation enforces strict supply-chain security. If you submit pull requests, bug fixes, or documentation updates, you warrant that the contribution is your original work and that you possess all intellectual property rights to distribute it under our hybrid license model.</p>
+            <p>7.2. <strong>GPG Signature Requirement:</strong> Every code contribution submitted to our Git repositories must be cryptographically signed using a verified GPG key. Commits that are unsigned, fail hash checks, or fail to match a contributor's verified public GPG profile will be automatically rejected from our primary hosting systems.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VIII: Prohibited Infrastructure Interference and Malicious Acts</h3>
+            <p>8.1. <strong>Prohibited Acts:</strong> You explicitly agree that you shall not engage in, assist with, or initiate any of the following malicious activities:</p>
+            <ul>
+              <li><strong>Distributed Denial of Service (DDoS):</strong> Flooding, socket-exhausting, or otherwise attempting to degrade the server performance of any QXS subdomain or mirror.</li>
+              <li><strong>Malicious Code Injection:</strong> Submitting files containing worms, local system trojans, telemetry scripts, or unauthorized tracing hooks to public forums or Git mirrors.</li>
+              <li><strong>Privilege Escalation:</strong> Writing custom modules within the QXS ecosystem designed to break out of sandboxed environments or access local files outside of declared directories.</li>
+              <li><strong>Signature Forgery:</strong> Forging GPG commit signatures or distributing binary builds falsely claiming to be signed by the Foundation's admin key.</li>
+            </ul>
+            <p>8.2. <strong>Defensive Blocks:</strong> The Foundation reserves the absolute right to deploy rate-limiters, web application firewalls (WAF), and IP blocking structures to prevent malicious acts. Violating IPs will be permanently blocked from our CDN networks.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IX: Third-Party Links & External CDN Disclaimers</h3>
+            <p>9.1. <strong>External Outbound Links:</strong> The Foundation subdomains may contain links to external third-party sites, repository mirrors, or community forums. These links are provided solely as developer conveniences. The Foundation has zero control over, does not endorse, and assumes no liability for the content, privacy practices, or security postures of any third-party domains.</p>
+            <p>9.2. <strong>CDN Dependency:</strong> We use independent content delivery networks (CDNs) to distribute large source zip files and compiled executables. The Foundation does not guarantee the continuous availability or security of these external mirrors, and you access them at your own risk.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article X: Disclaimer of Warranties</h3>
+            <p>10.1. <strong>As-Is Baseline:</strong> ALL COMPILER SYSTEMS, SOFTWARE PROGRAMS, RUNTIME UTILITIES, SYSTEM INTERFACES, GRAPHIC DESIGNS, HARDWARE BLUEPRINTS, AND DOCUMENTATION DRAFTS ARE PROVIDED TO YOU ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY.</p>
+            <p>10.2. <strong>Complete Exclusions:</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE FOUNDATION AND ITS TRUSTEES, SYSTEMS ADMINISTRATORS, DEVELOPERS, AND CO-RESEARCHERS EXPLICITLY DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OPERATIONAL RESILIENCE, SYSTEM COMPATIBILITY, COMPILER ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT CODES WILL COMPILE WITHOUT INTERRUPTIONS, THAT COMPILER DIAGNOSTICS ARE COMPLETELY FREE OF ERROR, OR THAT THE STACK WILL BE COMPATIBLE WITH ALL PAST OR FUTURE SYSTEM STANDARDS.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article XI: Ultimate Limitation of Liability</h3>
+            <p>11.1. <strong>Scope of Damages Excluded:</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL QXS FOUNDATIONS, ITS TRUSTEES, SYSTEM OPERATORS, DEVELOPERS, OR MIRROR PROVIDERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES WHATEVER. THIS INCLUDES, WITHOUT LIMITATION, DAMAGES FOR LOSS OF DEVELOPMENT DATA, SYSTEM CRASHES, REVENUES DEPRIVATION, REPUTATIONAL INJURIES, UNRECOVERABLE CRYPTOGRAPHIC KEYS, PASSWORD DECRYPTION FAILS, CLOUD STORAGE BREACHES, PROCESS STALLS, SYSTEM DOWNTIMES, OR HARDWARE DEGRADATION, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH INJURIES.</p>
+            <p>11.2. <strong>Local Control Standard:</strong> Because QXS tools run strictly under your local custody, you assume absolute responsibility for configuring, security-hardening, and maintaining your local machines and storage media. The Foundation's liability is strictly capped at zero. This limitation of liability is a fundamental condition of access to the Foundation's assets, without which they would not be made available to You.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article XII: Indemnification and Defense Commitments</h3>
+            <p>12.1. <strong>Indemnity Obligation:</strong> You agree to defend, indemnify, and hold harmless QXS Foundations, its developers, and systems administrators from and against any and all claims, liabilities, system damages, losses, expenses, and reasonable attorneys' fees arising out of your compilation, execution, deployment, or misuse of the software libraries, your violation of these Terms, or your infringement of any third-party intellectual property or privacy rights.</p>
+            <p>12.2. <strong>Legal Costs:</strong> In the event of a third-party claim eligible for indemnification, you agree to cover all reasonable legal defense costs. The Foundation reserves the right to assume exclusive control over the defense of any such claim.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article XIII: Governing Law, Dispute Resolution & Technical Arbitration</h3>
+            <p>13.1. <strong>Technical Arbitration:</strong> Any dispute, controversy, or claim arising under this Contract, including its formation, validity, breach, or termination, shall be settled exclusively by binding virtual arbitration. The process shall be overseen by an independent three-member technical panel proficient in software architecture, compilation rules, and source licensing schemas, ensuring an objective, expert evaluation of any claims.</p>
+            <p>13.2. <strong>Governing Law:</strong> These Terms and all related actions shall be governed by, construed, and enforced in accordance with standard international open-source legal paradigms, without regard to local conflicts of law principles.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article XIV: Force Majeure and Network Omissions</h3>
+            <p>14.1. <strong>Scope of Force Majeure:</strong> The Foundation shall not be held liable or responsible for any failure, delay, or interruption of subdomain access or mirror downloads resulting from acts beyond our reasonable control, including but not limited to global internet outages, routing failures, ISP throttling, government censorship, acts of God, war, labor disputes, infrastructure breakdowns, or physical hardware degradation.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article XV: Severability, Waivers, and Autonomy</h3>
+            <p>15.1. <strong>Severability:</strong> If any provision, article, or sub-clause of this Contract is deemed unlawful, void, or unenforceable by an authorized technical arbitration panel, that specific provision shall be deemed severed from this Agreement, and its invalidity shall not affect the validity and enforceability of any remaining provisions, which shall continue in full force and effect.</p>
+            <p>15.2. <strong>No Waiver:</strong> No failure or delay by the Foundation in exercising any right, power, or remedy under this Contract shall operate as a waiver of that or any other right.</p>
+            <p>15.3. <strong>Autonomy Statement:</strong> QXS Foundations remains fully autonomous. We do not accept corporate sponsorships that mandate licensing changes, guaranteeing that the QXS stack will remain sovereign, open, and builder-focused forever.</p>
+          </div>
+        </div>
+
+        <!-- 2. Privacy Policy (Highly Detailed Formal Legal Text) -->
+        <div id="doc-privacy" class="doc-content">
+          <h2>Privacy Policy and Data Custody</h2>
+          <p><em>Last updated: June 2026 — Version 3.3 — Core Governance Standard</em></p>
+          <p>QXS FOUNDATIONS IS RIGOROUSLY COMMITTED TO A ZERO-TELEMETRY OPERATIONAL STANDARD. WE BELIEVE THAT SOVEREIGN INDEPENDENCE AND COMPLETE SYSTEM PRIVACY BELONG PURELY IN THE HANDS OF THE BUILDER. THIS COMPREHENSIVE PRIVACY POLICY OUTLINES OUR DATA MINIMIZATION PRACTICES, LOCAL CLIENT ENCRYPTION MODELS, AND COMPLIANCE EXPECTATIONS.</p>
+          
+          <div class="legal-section">
+            <h3>Article I: Privacy Preamble & Zero-Telemetry Mandate</h3>
+            <p>1.1. <strong>Sovereign Privacy:</strong> Modern development platforms, compiler tools, and utility applications actively profile developers by silently monitoring console inputs, logging compiler output errors, parsing local source directories, and transmitting telemetry metadata back to corporate database arrays. QXS Foundations completely rejects this pervasive tracking culture. Your intellectual property and software operations are your exclusive business.</p>
+            <p>1.2. <strong>Categorical Telemetry Ban:</strong> All compiler systems, code packages, pre-compiled binaries, desktop utilities, command-line interfaces, and web frameworks developed by the Foundation are completely free of tracing cookies, tracking pixels, crash analytics, phone-home code segments, and telemetry reporting hooks. No user profile is ever created, and no metadata is transmitted to our servers when you build, compile, or run our applications.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article II: Telemetry Ban and Diagnostic Exclusions</h3>
+            <p>2.1. <strong>Zero Reporting:</strong> When a QXS compiler (such as QXS Lang) encounters a compilation error or core system crash, the diagnostic feedback loop remains entirely local on your machine. The compiler will write a local error report to your designated console screen or log directory, but will never attempt to package and upload this data to the Foundation. If you wish to seek assistance, you must copy and paste this text manually into an encrypted email thread with support.</p>
+            <p>2.2. <strong>Local Debugging:</strong> All testing, benchmarking, and profiling tools developed by the Foundation run exclusively client-side. No background telemetry channels are opened, ensuring that your core developmental workflows, algorithms, and logic remain fully secure and unseen within your local environment.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article III: Client-First Encryption Architecture & Master Key Custody</h3>
+            <p>3.1. <strong>Local Cryptography:</strong> Utilities such as QXS Safe Manager encrypt, process, and decrypt database volumes entirely within your machine's local runtime memory space. All cryptographic actions rely on audited, high-precision algorithms, utilizing AES-256 in Galois/Counter Mode (GCM) paired with Argon2ID key derivation parameters. At no point do your unencrypted credentials, passphrases, or master keys leave your local machine.</p>
+            <p>3.2. <strong>Absolute Key Custody:</strong> Because QXS Foundations does not host centralized cloud databases, we hold zero backup copies of your credentials, zero database keys, and zero system backdoors. You maintain absolute, exclusive custody of your system passphrases. If you lose your master key or forget your Argon2ID parameters, the Foundation has no technical capacity to assist you in restoring your data. Recovery is mathematically impossible without your local master key.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IV: Support Correspondence & rolling 30-Day Purge Rules</h3>
+            <p>4.1. <strong>Minimal Communication:</strong> When you initiate contact with the Foundation via email (e.g. <code>contact@qxs-foundations.org.in</code>, <code>security@qxs-foundations.org.in</code>), we receive your sending email address and whatever information you choose to include in your message. This data is utilized solely for the purpose of answering your query, debugging reported issues, or evaluating vulnerability reports.</p>
+            <p>4.2. <strong>Purge Rule:</strong> All support emails, logs, and attachments are processed through our routing systems and are automatically, permanently deleted within 30 calendar days of resolving the inquiry. No database of email addresses is compiled, and no technical telemetry profiles are ever linked to your support correspondence.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article V: Server Logging Protocols & Automated Rolling Overwrites</h3>
+            <p>5.1. <strong>Infrastructure Security Logs:</strong> Our web servers and content delivery networks (CDN) maintain basic network logs strictly to ensure server uptime and prevent DDoS attacks. These server logs record general transaction metadata, including connection timestamps, requested URLs, user-agent indicators, and the request status code.</p>
+            <p>5.2. <strong>Anonymization and Deletion:</strong> These logs do not contain personal profiles or tracking identifiers, and the IP addresses are partially masked at the gateway. Security logs are automatically overwritten on a strict, rolling 7-day schedule, preventing the long-term storage of network traffic histories.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VI: Data Subject Rights & CCPA/GDPR Compliance Out of the Box</h3>
+            <p>6.1. <strong>Compliance through Omission:</strong> We comply with all global data protection standards (including the European Union's General Data Protection Regulation - GDPR, the California Consumer Privacy Act - CCPA, and regional guidelines) through the ultimate standard of data omission. Because we do not collect, store, buy, sell, profile, or process your personal data, telemetry records, or behavioral indices, your rights to erasure, access, correction, and portability are satisfied instantly. There is simply no personal database in existence to request access to or deletion of.</p>
+            <p>6.2. <strong>No Profiling:</strong> We engage in zero automated decision-making, zero user profiling, and zero cross-site behavioral tracking. Your developer workflow remains fully sovereign and private.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VII: Third-Party Integration and Script Exclusions</h3>
+            <p>7.1. <strong>No Third-Party Scripts:</strong> QXS Foundations completely rejects the use of third-party tracking scripts, analytics cookies, or web beacons. Our subdomains do not host Google Analytics, Hotjar, Facebook Pixel, or any other tracking tools. All styling libraries, interactive scripts, and font layers are served directly from our secure local servers or are bundled locally to ensure that external servers cannot profile your visiting patterns.</p>
+            <p>7.2. <strong>Audit of Public Mirrors:</strong> We routinely audit our community mirror repositories and downloads to ensure that no third-party package dependencies silently introduce tracking SDKs, analytics loops, or remote telemetry frameworks.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VIII: Auditability, Public Mirroring, and Supply Chain Security</h3>
+            <p>8.1. <strong>Source Transparency:</strong> The only way to guarantee a zero-telemetry environment is through complete source code auditable transparency. Every line of QXS code is published openly on our Git mirrors, allowing independent developers and security firms to inspect the codebases, verify compilation structures, and guarantee the absolute absence of unannounced data transmission scripts.</p>
+            <p>8.2. <strong>Secure Supply Chain:</strong> All official release archives are signed with verified GPG keys. We advise all users to check the cryptographic signature of their downloaded packages to verify that the files have not been intercepted, modified, or loaded with third-party tracking components.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IX: System Modifications and Policy Adaptation Standards</h3>
+            <p>9.1. <strong>Policy Updates:</strong> The Foundation reserves the right to modify this Privacy Policy as new technologies, tools, and subdomains are integrated into the QXS ecosystem. When an update occurs, the date at the top of this document will be updated, and the new version will be published instantly on the <code>legal</code> portal.</p>
+            <p>9.2. <strong>No Policy Dilution:</strong> We promise that no future policy update will ever dilute our commitment to a zero-telemetry environment. QXS Foundations will remain sovereign, private, and local-first forever.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article X: Legal Contacts, Dispute Resolution, and Sovereignty</h3>
+            <p>10.1. <strong>Contact Channels:</strong> For any privacy-related questions, developer audits, or coordinate reporting, you may reach us directly at: <code>contact@qxs-foundations.org.in</code>.</p>
+            <p>10.2. <strong>Sovereignty:</strong> Your data belongs to you. By choosing QXS, you assume complete control over your local security protocols, encryption boundaries, and computing sovereignty. We respect and protect that choice by remaining completely out of your data loops.</p>
+          </div>
+        </div>
+
+        <!-- 3. Cookie and Session Integrity Policy (Highly Detailed Formal Legal Text) -->
+        <div id="doc-cookies" class="doc-content">
+          <h2>Cookie and Session Integrity Policy</h2>
+          <p><em>Last updated: June 2026 — Version 1.9 — Session Standards</em></p>
+          <p>THIS COOKIE POLICY EXPLAINS HOW OUR SUBDOMAINS MAINTAIN MAXIMUM OPERATIONAL PRIVACY BY COMPLETELY BANNING BEHAVIORAL TRACKING AND ADVERTISING COOKIES, RESTRICTING LOCAL SESSION DATA ONLY TO STRICTLY NECESSARY SYSTEM OPERATIONS.</p>
+          
+          <div class="legal-section">
+            <h3>Article I: Preamble and Basic Definitions of Tracking Technologies</h3>
+            <p>1.1. <strong>Cookie definition:</strong> Cookies are small text files placed on your local browser cache by web servers to store configuration parameters, preferences, and session variables. Local Storage and IndexedDB are client-side database utilities built into modern browsers that allow web applications to retain layout states and configurations locally.</p>
+            <p>1.2. <strong>Tracking Exclusions:</strong> QXS Foundations operates under a strict cookie exclusion policy. We believe that developers and builders should be able to read documentation, review products, check timelines, and browse subdomains without having their browser histories tracked, indexed, or commodified by third-party advertising conglomerates.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article II: Classification of Cookies & Absolute Exclusions</h3>
+            <p>2.1. <strong>Essential Session Storage:</strong> We only save cookies or local storage states in your browser when they are strictly, technically necessary for the functional operation of the website. These essential storage components do not track you across other websites, do not record your personal information, and cannot be used to profile your computing habits.</p>
+            <p>2.2. <strong>No Marketing Cookies:</strong> We strictly do not use, save, or allow marketing cookies, retargeting pixels, social media widgets, or advertising cookies on any QXS domain or subdomain. Your browser memory remains completely free of corporate tracking footprints when you visit our sites.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article III: Strictly Essential Cookies & System-Defined Storage Bounds</h3>
+            <p>3.1. <strong>Essential Parameters:</strong> The strictly necessary local storage values saved on QXS domains are limited to:</p>
+            <ul>
+              <li><strong>Active Tab States:</strong> Storing which document tab you have selected on the <code>legal</code> directory to ensure the active tab remains consistent if you refresh the page.</li>
+              <li><strong>UI Layout Choices:</strong> Retaining whether you have expanded or collapsed the mobile navigation menu, preventing the menu from visual glitches during viewport changes.</li>
+              <li><strong>Safe Key Iterations:</strong> QXS Safe Manager may utilize local browser session states strictly to perform cryptographic operations (such as holding your active Argon2ID hash in temporary memory only during the active safe session, purging it immediately upon tab closure).</li>
+            </ul>
+            <p>3.2. <strong>Auto-Purge:</strong> Any essential cookies saved in your browser are session-based and are configured to automatically self-destruct as soon as you close your browser tab or clear your web cache.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IV: Complete Ban on Analytical, Behavioral, and Third-Party Pixels</h3>
+            <p>4.1. <strong>Analytical Exclusions:</strong> We completely exclude Google Analytics, Hotjar, Facebook Connect, DoubleClick, and all other behavioral profiling and analytics platforms. We do not analyze your browsing journey, and we do not compile heatmaps or scroll logs. We believe the best way to protect your privacy is to simply never collect this data in the first place.</p>
+            <p>4.2. <strong>No Social Tracking:</strong> We do not integrate active social media share buttons that silently load tracking scripts in the background. All links to public platforms are static HTML elements that do not drop tracking scripts or cookies onto your computer.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article V: Web Subdomains Auditing & CDN Containment Policies</h3>
+            <p>5.1. <strong>Subdomain Audits:</strong> The Foundation regularly audits all subdomains (<code>www</code>, <code>docs</code>, <code>safe</code>, <code>lang</code>, <code>os</code>, <code>wsc</code>, <code>ai</code>) to ensure that no developer updates accidentally introduce unauthorized cookies or session logs. All scripts, fonts, and styling elements are audited for strict privacy compliance.</p>
+            <p>5.2. <strong>CDN Isolation:</strong> When using content delivery networks to distribute static site assets, we configure our gateways to strip all tracking headers, preventing CDN providers from dropping cookies or logging visitor behavioral profiles.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VI: Local Browser Controls, Configuration, and No-Degradation Guarantee</h3>
+            <p>6.1. <strong>Browser Controls:</strong> You maintain absolute control over your browser security settings. You can choose to block all cookies, clear local storage volumes, or browse our subdomains using privacy-focused browsers or private window modes (Incognito).</p>
+            <p>6.2. <strong>No Degradation:</strong> Unlike corporate websites that lock you out or break completely if you reject cookies, QXS Foundations sites are engineered to remain fully functional, lightweight, and accessible even if you block cookies and local storage entirely in your browser settings. You will suffer zero degradation in reading our docs, reviewing our products, or downloading our source archives.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VII: Policy Updates, Regulatory Alignments, and Contacts</h3>
+            <p>7.1. <strong>Policy Updates:</strong> This Cookie Policy may be updated to reflect changes in web standards or system configurations. Any updates will be posted here with an updated version number.</p>
+            <p>7.2. <strong>Legal Inquiries:</strong> If you have any questions or require an audit of our cookie-free systems, you may contact our systems administrator at: <code>contact@qxs-foundations.org.in</code>.</p>
+          </div>
+        </div>
+
+        <!-- 4. Open Source / Licensing Notice (Highly Detailed Formal Legal Text) -->
+        <div id="doc-licensing" class="doc-content">
+          <h2>Open Source and Licensing Notice</h2>
+          <p><em>Last updated: June 2026 — Version 4.3 — Primary Licensing Document</em></p>
+          <p><strong>QXS Foundations is dedicated to sovereign open or Closed access. Our tools are released under permissive with some restrictions/ open / proprietary licensing, accompanied by clear, public contribution guidelines.</strong></p>
+          
+          <div class="legal-section">
+            <h3>Article I: Hybrid Sovereign Licensing Architecture</h3>
+            <p>1.1. <strong>Foundational Purpose:</strong> Modern software licensing paradigms are structurally broken. Standard corporate permissive licenses allow massive tech conglomerates to ingest open-source libraries, package them inside proprietary cloud API loops, and restrict developer sovereignty. Conversely, strict copyleft models can stifle enterprise integration and local prototyping. To solve this, QXS Foundations implements a robust, multi-tier hybrid licensing approach: **Sovereign Open or Closed Access**.</p>
+            <p>1.2. <strong>Multi-Tier Classification:</strong> To support independent application development while protecting core architectural research from corporate exploitation, the QXS ecosystem is partitioned into distinct licensing categories:</p>
+            <ol>
+              <li><strong>Permissive Open Modules:</strong> Basic CLI utilities, local client drivers, document templates, and design schemas are released under highly permissive terms (such as MIT or Apache 2.0 dual licenses), allowing builders to integrate, modify, and distribute these layers with complete freedom.</li>
+              <li><strong>Permissive with Restrictions:</strong> Core compiler blocks (such as QXS Lang compiler modules) and fundamental cryptographic security boundaries are released under custom permissive licenses that mandate absolute source attribution, GPG commit tracing, and restrict remote corporate SaaS packaging without providing local-first compiler execute options to end-users.</li>
+              <li><strong>Proprietary / Closed Kernels:</strong> Early-stage operating system core modules (QXS OS kernels), low-level virtual machine layers, and experimental Wave State Computer (WSC) hardware simulation architectures may utilize proprietary or closed access models. This protects experimental architectural research from intellectual property dilution, ensuring that sovereign hardware and kernel designs remain secure and independent during early maturation phases.</li>
+            </ol>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article II: Foundational Philosophy: Permissive vs Proprietary</h3>
+            <p>2.1. <strong>Sovereignty Over Corporate Lock-in:</strong> The Foundation believes that open source must serve the individual developer, not just large cloud infrastructure corporations. By selectively employing proprietary licenses on core kernel structures while keeping compilers open and transparent, we prevent massive conglomerates from enclosing the QXS stack. This ensures the survival of an independent ecosystem for small and mid-level application developers.</p>
+            <p>2.2. <strong>Sovereign Balance:</strong> This hybrid approach guarantees that the tools you build with remain open, customizable, and free from licensing traps, while the underlying deep-tech research remains shielded from corporate exploitation.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article III: Permissive Open Modules (MIT/Apache 2.0 Dual License)</h3>
+            <p>3.1. <strong>License Grant:</strong> The permissive open-source modules of the QXS stack are dual-licensed under the terms of the MIT License and the Apache License, Version 2.0. You may choose either license when modifying or distributing these modules.</p>
+            <p>3.2. <strong> MIT Terms:</strong> Permission is hereby granted, free of charge, to any person obtaining a copy of these open-source modules, to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to preserving the original copyright notice in all copies.</p>
+            <p>3.3. <strong>Apache 2.0 Terms:</strong> Subject to the terms and conditions of the Apache 2.0 License, each contributor grants You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright and patent license to reproduce, prepare derivative works of, publicly display, and distribute the Work.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IV: Permissive with Restrictions (Intent-Aware Compiler Safety Clauses)</h3>
+            <p>4.1. <strong>Intent-Aware Licensing:</strong> Core compiler layers (such as QXS Lang modules) are licensed under custom permissive terms containing strict safety and sovereignty restrictions. You are fully permitted to download, compile, modify, and use the compiler locally to build any software applications.</p>
+            <p>4.2. <strong>SaaS Restrictions:</strong> You agree not to wrap the compiler engine into a proprietary, paid cloud compiling API that restricts developers from downloading the source code or compiling their codebases locally. If you offer QXS compilation services, you must provide the end-users with the exact compiler configuration files and command-line scripts to reproduce the builds locally on their own hardware.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article V: Proprietary / Closed Kernels</h3>
+            <p>5.1. <strong>Sovereign Hardware Research:</strong> Deep hardware simulation blueprints, experimental wave state math arrays, and core OS kernel blocks are protected under proprietary licensing models. Access to these source codes is provided strictly on a read-only, review-only basis through our public git mirrors for security auditing and educational verification.</p>
+            <p>5.2. <strong>Distribution Ban:</strong> You are strictly prohibited from compiling, repackaging, or distributing these closed/proprietary modules for commercial purposes without securing prior, explicit written authorization from QXS Foundations' governing board.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VI: Public Code Mirroring, Auditing, and Supply-Chain Safety</h3>
+            <p>6.1. <strong>Auditable Transparency:</strong> Regardless of whether a QXS module is licensed as permissive, restricted, or closed/proprietary, the Foundation publishes every single line of active source code on our public Git mirror repositories (<code>git.qxs-foundations.org.in</code>). We reject security through obscurity, ensuring that independent builders can audit every logic block, verify compilation variables, and guarantee the complete absence of backdoors, telemetry, or hidden tracking scripts.</p>
+            <p>6.2. <strong>Supply Chain Verification:</strong> Every official software release is signed using the Foundation's verified GPG key. Builders are advised to cryptographically verify these signatures to guarantee that their local installations exactly match the audited source blocks published on our mirrors.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VII: GPG Cryptographic Signatures & Commit Verification Standards</h3>
+            <p>7.1. <strong>Strict Signature Rules:</strong> To protect the ecosystem against supply chain compromises and code injection attacks, the Foundation enforces a strict GPG commit signature policy. Every commit in our public tree must be cryptographically signed by a verified GPG key linked to an authorized contributor's public profile.</p>
+            <p>7.2. <strong>Automatic Rejection:</strong> Any commits that lack a verified GPG signature, contain altered hash chains, or fail our automated container validation checks will be automatically, permanently rejected from our primary git mirror streams.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article VIII: Contributor License Agreement (CLA) & Intellectual Property Assigns</h3>
+            <p>8.1. <strong>Submission of Contributions:</strong> When you submit any code, document updates, bug fixes, or architectural proposals to the Foundation, you agree to assign contribution rights under the terms of our Contributor License Agreement (CLA).</p>
+            <p>8.2. <strong>IP Assignment:</strong> By submitting a contribution, you grant the Foundation a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright and patent license to reproduce, adapt, compile, and distribute your contributions under our hybrid licensing architecture, while maintaining your personal attribution in the contributor roll.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Article IX: Licensing Arbitration, Rights Enforcement, and Foundation Autonomy</h3>
+            <p>9.1. <strong>Licensing Disputes:</strong> Any dispute, claim, or copyright inquiry arising under this Licensing Notice shall be submitted exclusively to independent open-source arbitration overseen by a technical audit panel proficient in software licensing, source provenance, and compiler safety systems.</p>
+            <p>9.2. <strong>Autonomy Statement:</strong> QXS Foundations remains fully autonomous. We do not accept corporate sponsorships that mandate licensing changes, guaranteeing that the QXS stack will remain sovereign, open, and builder-focused forever.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <p>&copy; 2026 QXS Foundations. Sovereign by Design.</p>
+        <p style="font-size: 0.8rem;">For general queries: <a href="mailto:contact@qxs-foundations.org.in">contact@qxs-foundations.org.in</a></p>
+      </div>
+      <nav class="footer-nav">
+        <a href="legal.html">Legal</a>
+        <a href="security.html">Security</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  
+  <!-- Smooth Liquid Tab Switcher Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-card');
+      const docs = document.querySelectorAll('.doc-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Set active tab class
+          tabs.forEach(t => t.classList.remove('active-tab'));
+          tab.classList.add('active-tab');
+          
+          // Set active document display
+          const targetTab = tab.dataset.tab;
+          docs.forEach(doc => {
+            if (doc.id === `doc-${targetTab}`) {
+              doc.classList.add('active-doc');
+            } else {
+              doc.classList.remove('active-doc');
+            }
+          });
+          
+          // Smooth scroll to document viewer on mobile viewports
+          if (window.innerWidth < 768) {
+            document.querySelector('.legal-document-viewer').scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

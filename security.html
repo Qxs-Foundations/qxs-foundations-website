@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security | QXS Foundations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="QXS Foundations security disclosure policy: GPG contact keys, responsible reporting paths, coordination steps, and disclosure timelines.">
+</head>
+<body class="security-page">
+  <div class="page-shell">
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="QXS Foundations" class="brand-logo">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Our Projects</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="docs.html">Docs</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="git.html">Git</a>
+        <a href="legal.html">Legal</a>
+        <a href="security.html" class="active">Security</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Page Intro -->
+      <section class="section page-intro reveal active">
+        <div>
+          <span class="eyebrow">Trust & Safety</span>
+          <h1>Security disclosure policy</h1>
+          <p>We prioritize platform safety and maintain open, structured channels for responsible vulnerability reporting.</p>
+        </div>
+      </section>
+
+      <!-- Security Grid (3 Cards using customized card grid styling) -->
+      <section class="section card-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+        <article class="security-card">
+          <span class="badge">Vulnerability Policy</span>
+          <h2>Disclosure Model</h2>
+          <p style="margin-bottom: 0;">If you identify a security flaw or vulnerability within any QXS platform, compiler, or subdomain, please notify us immediately through our encrypted channels.</p>
+        </article>
+
+        <article class="security-card">
+          <span class="badge">Scope & Format</span>
+          <h2>Responsible reporting</h2>
+          <p style="margin-bottom: 0;">Reports should include exact component paths, compilable reproduction steps, potential impact analysis, and any diagnostic proof-of-concept logs.</p>
+        </article>
+
+        <article class="security-card">
+          <span class="badge">Contact Channels</span>
+          <h2>Contact details</h2>
+          <p style="margin-bottom: 8px;"><strong>Security Contact:</strong><br><a href="mailto:security@qxs-foundations.org.in">security@qxs-foundations.org.in</a></p>
+          <p style="margin-bottom: 0;"><strong>Vulnerability Reporting:</strong><br><a href="mailto:vulnerability@qxs-foundations.org.in">vulnerability@qxs-foundations.org.in</a></p>
+        </article>
+      </section>
+
+      <!-- Security Coordination details (Split section) -->
+      <section class="section split reveal">
+        <div>
+          <span class="eyebrow">Our Commitment</span>
+          <h2 style="margin-top: 8px; margin-bottom: 16px;">How we respond</h2>
+          <p style="margin-bottom: 12px;">We take security seriously and recognize the crucial role of independent security researchers. We do not prosecute or blacklist reporters who act in good faith and follow responsible disclosure standards.</p>
+          <p>Upon receiving a report, our engineering team immediately starts triage. We work directly with you to coordinate a secure patch schedule and provide appropriate credit upon public release.</p>
+        </div>
+        <div class="panel-card">
+          <span class="badge badge-secondary" style="margin-bottom: 8px;">Guidelines</span>
+          <h3 style="margin-bottom: 8px; color: var(--text-primary);">Response Timeline</h3>
+          <ul style="margin: 0; font-size: 0.88rem;">
+            <li><strong>72-Hour acknowledgement</strong>: Immediate receipt confirmation and initial triage assessment.</li>
+            <li><strong>Coordinated disclosure</strong>: We collaborate on fixes and resolve issues before public disclosure.</li>
+            <li><strong>User safety first</strong>: We prioritize immediate hotfix releases to protect live user nodes.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <p>&copy; 2026 QXS Foundations. Sovereign by Design.</p>
+        <p style="font-size: 0.8rem;">For general queries: <a href="mailto:contact@qxs-foundations.org.in">contact@qxs-foundations.org.in</a></p>
+      </div>
+      <nav class="footer-nav">
+        <a href="legal.html">Legal</a>
+        <a href="security.html">Security</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
